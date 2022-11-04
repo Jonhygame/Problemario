@@ -37,10 +37,13 @@
             $result = mysqli_query($this->a_conexion, $pQuery);
             $this->m_desconecta();
             $row = $result->fetch_array(MYSQLI_NUM);
-            
-            while ($row = $result->fetch_assoc()) {
-                var_dump($row);
-            }
+            do{
+                array_push($array,implode($row));
+            }while ($row = $result->fetch_assoc());
+            var_dump($array[0]);
+            rsort($array);
+            var_dump($array[0]);
+            //print_r($array,false);
             /*
             array_push($array, implode($row)."");
             echo implode($row).":";
