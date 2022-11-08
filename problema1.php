@@ -40,10 +40,14 @@
             do{
                 array_push($array,implode($row));
             }while ($row = $result->fetch_assoc());
-            var_dump($array[0]);
+            //var_dump($array[0]);
             rsort($array);
-            var_dump($array[0]);
-            //print_r($array,false);
+            //var_dump($array[0]);
+            //print_r($array);
+            var_export($array);
+            foreach ($array as $array => ) {
+                # code...
+            }
             /*
             array_push($array, implode($row)."");
             echo implode($row).":";
