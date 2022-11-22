@@ -8,9 +8,9 @@ function f_validar($s) {
     if (preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $s)) {
         //echo "El email ".$s." es correcto."; 
         $final = explode("@",$s);
-        echo $final[1];
+        echo $final[1].PHP_EOL;
     }else{
-        echo "DOMINIO INCORRECTO";
+        echo "DOMINIO INCORRECTO".PHP_EOL;
     }
 }
 ?>
