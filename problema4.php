@@ -9,7 +9,6 @@
   $Password = trim(fgets(STDIN));
   $BaseDeDatos =  trim(fgets(STDIN));
   $oDB = new baseDatos();
-  
   class baseDatos {
     var $Servidor;
     var $Usuario;
@@ -30,7 +29,6 @@
         do{
           array_push($array,implode($row));
         }while ($row = $result->fetch_assoc());
-        echo "<br></br>";
         rsort($array);
         foreach ($array as $valor) {
           echo $valor.":";
