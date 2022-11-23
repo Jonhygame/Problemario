@@ -5,10 +5,13 @@ for ($i=0; $i < intval($casos) ; $i++) {
     f_validar($correo);
 }
 function f_validar($s) {
-    if (preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $s)) {
-        //echo "El email ".$s." es correcto."; 
-        $final = explode("@",$s);
-        echo $final[1].PHP_EOL;
+    if(){
+        if(preg_match('/^[A-z0-9\\._-]+@[A-z0-9][A-z0-9-]*(\\.[A-z0-9_-]+)*\\.([A-z]{2,6})$/',$s)){
+            $final = explode("@",$s);
+            echo $final[1].PHP_EOL;
+        }else{
+            echo "DOMINIO INCORRECTO".PHP_EOL;
+        }
     }else{
         echo "DOMINIO INCORRECTO".PHP_EOL;
     }
