@@ -1,13 +1,13 @@
 <?php
 //Ejercicio 
-    $Servidor = "localhost";
-    $Usuario = "root";
-    $Password = "";
-    $BaseDeDatos =  "mysql";
-    //$Servidor = trim(fgets(STDIN));
-    //$Usuario = trim(fgets(STDIN));
-    //$Password = trim(fgets(STDIN));
-    //$BaseDeDatos =  trim(fgets(STDIN));
+    //$Servidor = "localhost";
+    //$Usuario = "root";
+    //$Password = "";
+    //$BaseDeDatos =  "mysql";
+    $Servidor = trim(fgets(STDIN));
+    $Usuario = trim(fgets(STDIN));
+    $Password = trim(fgets(STDIN));
+    $BaseDeDatos =  trim(fgets(STDIN));
     $oDB = new baseDatos();
     $oDB->m_imprLista($Servidor, $Usuario, $Password, $BaseDeDatos);
     
